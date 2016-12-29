@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 
- <context:component-scan base-package="cz.jiripinkas.jba.controller" />
+ <context:component-scan base-package="ru.janina.ro.controller" />
 
 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 	    <property name="definitions">
