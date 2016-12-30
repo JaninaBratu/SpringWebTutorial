@@ -46,7 +46,7 @@
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-      
+ 
 	<tiles:insertAttribute name="body" />
 
 	<br>
@@ -56,8 +56,6 @@
 		<tiles:insertAttribute name="footer" />
 	</center>
 
-
-<div class="container">
-
+ </div>
 </body>
 </html>
