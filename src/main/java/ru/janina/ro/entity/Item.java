@@ -17,13 +17,29 @@ public class Item {
 	@GeneratedValue
 	private Integer id;
 	
-	private String name;
+	private String title;
 	
 	private String description;
 	
 	@Column(name = "published_date")
 	private Date publishedDate;
 	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public Blog getBlog() {
+		return blog;
+	}
+
+	public void setBlog(Blog blog) {
+		this.blog = blog;
+	}
+
 	@ManyToOne
 	@JoinColumn(name = "blog_Id")
 	private Blog blog;
@@ -37,11 +53,11 @@ public class Item {
 	}
 
 	public String getName() {
-		return name;
+		return title;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.title = name;
 	}
 
 	public String getDescription() {
