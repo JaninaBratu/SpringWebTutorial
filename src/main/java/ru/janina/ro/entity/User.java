@@ -42,6 +42,14 @@ public class User {
 		return id;
 	}
 
+	public List<Blog> getBlogs() {
+		return blogs;
+	}
+
+	public void setBlogs(List<Blog> blogs) {
+		this.blogs = blogs;
+	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
