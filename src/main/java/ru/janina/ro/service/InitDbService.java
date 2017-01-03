@@ -66,14 +66,14 @@ public class InitDbService {
 		Item item1 =  new Item();
 		item1.setBlog(blogJavavids);
 		item1.setTitle("first");
-		item1.setLink("www.google.com");
+		item1.setLink("www.javavids.com");
 		item1.setPublishedDate(new java.sql.Date(Calendar.getInstance().getTime().getTime()));
 		itemRepository.save(item1);
 		
 		Item item2 =  new Item();
 		item2.setBlog(blogJavavids);
 		item2.setTitle("second");
-		item2.setLink("www.google.com");
+		item2.setLink("www.javavids.com");
 		item2.setPublishedDate(new java.sql.Date(Calendar.getInstance().getTime().getTime()));
 		itemRepository.save(item2);
 		
