@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@taglib uri="http://www.springframework.org/tags" prefix= "spring"%>
 
 <table class="table table-bordered table-hover table-striped">
 
@@ -17,11 +17,14 @@
 
 	<tbody>
 		<c:forEach items="${users}" var="user">
-			<tr>
-				<td>
+		<tr>
+			<td>
+				<a href ="<spring:url value="/users/${user.id}.html" />">
 					${user.name}
-				</td>
-			</tr>
+				</a>
+			</td>
+				
+		</tr>
 		</c:forEach>
 
 	</tbody>
