@@ -43,4 +43,5 @@
 	<jpa:repositories base-package="ru.janina.ro.repository" 
 	entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager" />
 
+	<import resource="security.xml"/>
 </beans>
