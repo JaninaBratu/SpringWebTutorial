@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import ru.janina.ro.entity.Blog;
 import ru.janina.ro.entity.User;
+import ru.janina.ro.repository.BlogRepository;
 import ru.janina.ro.service.BlogService;
 import ru.janina.ro.service.UserService;
 
@@ -81,5 +82,19 @@ public class UserController {
 		String name = principal.getName();
 		blogService.save(blog, name);
 		return "redirect:/account.html";
+	}
+	
+	@RequestMapping("/blog/remove/{id}")
+	public String removeBlog(@PathVariable int id)
+	{
+		blogService.delete(id);
+		return "redirect:/account.html";
+	}
+	
+	@RequestMapping("/users/remove/{id}")
+	public String removeUser(@PathVariable int id)
+	{
+		userService.delete(id);
+		return "redirect:/users.html";
 	}
 }
