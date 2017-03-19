@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.URL;
 
 import javax.persistence.CascadeType;
 
@@ -19,8 +22,11 @@ public class Blog {
 	@GeneratedValue
 	private Integer id;
 	
+	@Size(min=1, message="Name must be at least 1 character!")
 	private String name;
 
+	@Size(min=1, message="Invalid URL!")
+	@URL
 	private String url;
 	
 	@ManyToOne
